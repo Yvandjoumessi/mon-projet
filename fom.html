@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil - Pharmacie</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* BACKGROUND FULL COVER */
+body{
+    height:100vh;
+    background: url('https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg') no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* OVERLAY */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    top:0;
+    left:0;
+}
+
+/* LOGO HAUT */
+.top-logo{
+    position:absolute;
+    top:20px;
+    font-size:100px;
+    color:#08b93d;
+    z-index:2;
+}
+
+/* CADRE PRINCIPAL */
+.main-card{
+    position:relative;
+    z-index:2;
+    background:rgba(203, 200, 202, 0.95);
+    padding:30px;
+    width:95%;
+    max-width:700px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    text-align:center;
+}
+
+/* SOUS-CADRE MESSAGE (VERT FONCÉ) */
+.message-box{
+    background:#006d5b;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:25px;
+    animation:floatText 3s ease-in-out infinite;
+}
+
+.message-box h1{
+    font-size:18px;
+    color:rgb(236, 230, 230);
+    font-weight:bold;
+}
+
+/* ICONE MEDICAMENT */
+.meds-icon{
+    font-size:70px;
+    color:#097368;
+    margin-bottom:20px;
+}
+
+/* BOUTON */
+.btn{
+    
+    padding:5px 40px;
+    border:none;
+    border-radius:30px;
+    background:rgb(161, 32, 3);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#049117;
+    transform:scale(1.05);
+}
+
+/* ANIMATION FLOTTANTE */
+@keyframes floatText{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+    100%{ transform:translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="top-logo">
+    <i class="fas fa-clinic-medical"></i>
+</div>
+
+<!-- CADRE PRINCIPAL -->
+<div class="main-card">
+
+    <!-- SOUS-CADRE MESSAGE -->
+    <div class="message-box">
+        <h1>"BIENVENUE A LA PHARMACIE DU CESMAN !"</h1>
+    </div>
+
+    <!-- ICONE -->
+    <div class="meds-icon">
+        <i class="fas fa-pills"></i>
+    </div>
+
+    <!-- BOUTON -->
+    <button class="btn" onclick="entrer()">
+        <h1>Cliquez Ici !</h1>
+    </button>
+
+</div>
+
+<script>
+function entrer(){
+    window.location.href = "lg.php";
+    
+}
+</script>
+
+</body>
+</html>
